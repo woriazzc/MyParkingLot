@@ -1,0 +1,2 @@
+<!--pages/parkNav/parkNav.wxml-->
+<web-view src="http://test.woria.xyz?v=1.1"></web-view>

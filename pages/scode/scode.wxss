@@ -1,0 +1,10 @@
+.imagesize{
+    display: flex;
+    height: 600rpx;
+    justify-content: center;
+    align-items: center;
+}
+.imagesize image{
+    width: 300rpx;
+    height: 300rpx;
+}

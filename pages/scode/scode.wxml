@@ -1,0 +1,5 @@
+<view class='imagesize'>
+    <image src="/images/scanCode.png" />
+</view>
+
+<button bindtap="scanCode" style="width:80vw" type="primary">扫一扫</button>

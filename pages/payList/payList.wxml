@@ -1,0 +1,40 @@
+<view class="record">
+    <view class="on">
+       <text class="action">沪A·897H3</text>
+       <text class="money">微信支付：¥5.00</text>
+    </view>
+  <view class="under">
+       <text class="time">交易时间: <text class="detail">2018-02-01 09:18</text> </text>
+       <text class="succerr">交易成功</text>
+  </view>
+</view>
+<view class="record">
+    <view class="on">
+       <text class="action">沪A·897H3</text>
+       <text class="money">微信支付：¥10.00</text>
+    </view>
+  <view class="under">
+       <text class="time">交易时间: <text class="detail">2019-12-31 19:28</text> </text>
+       <text class="succerr">交易成功</text>
+  </view>
+</view>
+<view class="record">
+    <view class="on">
+       <text class="action">沪A·TP123</text>
+       <text class="money">微信支付：¥10.00</text>
+    </view>
+  <view class="under">
+       <text class="time">交易时间: <text class="detail">2020-10-10 11:21</text> </text>
+       <text class="succerr">交易成功</text>
+  </view>
+</view>
+<view class="record">
+    <view class="on">
+       <text class="action">沪A·TP123</text>
+       <text class="money">微信支付：¥5.00</text>
+    </view>
+  <view class="under">
+       <text class="time">交易时间: <text class="detail">2021-05-06 10:59</text> </text>
+       <text class="succerr">交易成功</text>
+  </view>
+</view>

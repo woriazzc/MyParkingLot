@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/empLot/empLot", 
+    "pages/user/user",
+    "pages/paymentPage/paymentPage",  
+    "pages/parkNav/parkNav", 
+    "pages/payList/payList",
+    "pages/scode/scode"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/empLot/empLot",
+        "text": "空车位",
+        "iconPath": "icon/steering_wheel.png",
+        "selectedIconPath": "icon/steering_wheel.active.png"
+      },
+      {
+        "pagePath": "pages/parkNav/parkNav",
+        "text": "我的车",
+        "iconPath": "icon/stopwatch.png",
+        "selectedIconPath": "icon/stopwatch.active.png"
+      },
+      {
+        "pagePath": "pages/scode/scode",
+        "text": "扫一扫",
+        "iconPath": "icon/scanCode.png",
+        "selectedIconPath": "icon/scanCode.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "icon/user_male3.png",
+        "selectedIconPath": "icon/user_male3.active.png"
+      }
+    ]
+  },
+  
+    
+  "sitemapLocation": "sitemap.json"
+}
