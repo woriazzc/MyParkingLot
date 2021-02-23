@@ -21,6 +21,11 @@
   </view>
 </view>
 <view class="menu-annotation">已登录手机号:{{userPhoneNumber}}</view>
+<view class="menu-list-container center" bindtap="toSearch">
+  <view class="menu-list-item center">
+    <view class="text-center" style="color:green;font-size:16px;">预约取车</view>
+  </view>
+</view>
 <view class="menu-list-container center">
   <view class="menu-list-item center">
     <view class="text-center" style="color:red;font-size:16px;">退出登录</view>

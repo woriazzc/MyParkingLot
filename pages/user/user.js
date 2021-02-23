@@ -42,5 +42,10 @@ Page({
     wx.navigateTo({
       url: '../payList/payList'
     });
+  },
+  toSearch:function(){
+    wx.navigateTo({
+      url: '../getCar/getCar'
+    });
   }
 })

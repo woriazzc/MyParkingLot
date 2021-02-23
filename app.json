@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/empLot/empLot", 
+    "pages/getCar/getCar",
     "pages/user/user",
     "pages/paymentPage/paymentPage",  
     "pages/parkNav/parkNav", 

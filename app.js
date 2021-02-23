@@ -46,9 +46,47 @@ App({
     windowWidth:0,
     windowHeight:50,
     serviceUrl: 'http://localhost:53658/api',
-    carCode: "沪A·897H3",
+    carCode: "沪A·TP296",
     carPos: "2057 B2层",
     startTime: "19:21",
-    userPhoneNumber: "17321274215"
+    userPhoneNumber: "17321274215",
+    carList: [
+      {
+        PlateNumber: "沪ATP296",
+        ParkingPosition: "2057 B2层",
+        GenerateDate: "19:21",
+        Total: "5.00"
+      },
+      {
+        PlateNumber: "沪B897H3",
+        ParkingPosition: "2057 B2层",
+        GenerateDate: "19:21",
+        Total: "5.00"
+      },
+      {
+        PlateNumber: "沪C897H3",
+        ParkingPosition: "2057 B2层",
+        GenerateDate: "19:21",
+        Total: "5.00"
+      },
+      {
+        PlateNumber: "沪D897H3",
+        ParkingPosition: "2057 B2层",
+        GenerateDate: "19:21",
+        Total: "5.00"
+      },
+      {
+        PlateNumber: "京E897H3",
+        ParkingPosition: "2057 B2层",
+        GenerateDate: "19:21",
+        Total: "5.00"
+      },
+      {
+        PlateNumber: "京QA8993",
+        ParkingPosition: "2057 B2层",
+        GenerateDate: "19:21",
+        Total: "5.00"
+      }
+    ]
   }
 })
