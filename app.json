@@ -1,6 +1,8 @@
 {
   "pages":[
+    "pages/bigAdv/bigAdv",
     "pages/empLot/empLot", 
+    "pages/advPage/advPage",
     "pages/getCar/getCar",
     "pages/user/user",
     "pages/paymentPage/paymentPage",  
@@ -29,10 +31,10 @@
         "selectedIconPath": "icon/stopwatch.active.png"
       },
       {
-        "pagePath": "pages/scode/scode",
-        "text": "扫一扫",
-        "iconPath": "icon/scanCode.png",
-        "selectedIconPath": "icon/scanCode.png"
+        "pagePath": "pages/advPage/advPage",
+        "text": "优惠券",
+        "iconPath": "icon/bill.png",
+        "selectedIconPath": "icon/bill.png"
       },
       {
         "pagePath": "pages/user/user",

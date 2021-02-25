@@ -146,21 +146,24 @@ Page({
       title: '请注意',
       content: '支付成功后，您将有30分钟时间将车辆驶出。超时将按照车辆停入时间继续计费，请您合理安排时间。',
       confirmText:"确认支付",
-      success:function(res){
-        setTimeout(function () {
-          wx.showToast({
-            title: '支付成功',
-            icon: 'success',
-            duration: 700, 
-            success:function(){ 
-                setTimeout(function () { 
-                    wx.switchTab({ 
-                        url: '../../pages/parkNav/parkNav'
-                     }) 
-                 }, 800) 
-             } 
-         })
-        }, 500)
+      success: function (res) {
+        console.log(res);
+        if (res.confirm) {
+          setTimeout(function () {
+            wx.showToast({
+              title: '支付成功',
+              icon: 'success',
+              duration: 700, 
+              success:function(){ 
+                  setTimeout(function () { 
+                      wx.switchTab({ 
+                          url: '../../pages/parkNav/parkNav'
+                       }) 
+                   }, 800) 
+               } 
+           })
+          }, 500)
+        }
       },
 
     })

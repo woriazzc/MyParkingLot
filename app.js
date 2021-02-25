@@ -45,7 +45,6 @@ App({
     userInfo:null,
     windowWidth:0,
     windowHeight:50,
-    serviceUrl: 'http://localhost:53658/api',
     carCode: "沪A·TP296",
     carPos: "2057 B2层",
     startTime: "19:21",
