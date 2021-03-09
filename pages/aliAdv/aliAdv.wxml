@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="wrapper">
+        <scroll-view style="height:100%;">
+            <view class="inner-container" >
+                <image class="img1" 
+                src="https://static.worldaic.com.cn/IMAGE/2020-06-16/badf826b60364e3fa5b020011b12513e.jpg" 
+                style="width:300px;height:170px;"/>
+                <view class="line-title">
+                    <text class="top-text text" style="font-size:25px;line-height:1;">
+                        阿里巴巴集团
+                    </text>
+                      
+                </view>
+                <view class="introduce">
+                    <text class="text colorLeave2">
+                        阿里巴巴集团的使命是让天下没有难做的生意。
+                        我们旨在赋能企业，帮助其变革营销、销售和经营的方式，提升其效率。我们为商家、品牌及其他企业提供技术基础设施以及营销平台，帮助其借助新技术的力量与用户和客户进行互动，并更高效地进行经营。
+                        我们的业务包括核心商业、云计算、数字媒体及娱乐以及创新业务。除此之外， 我们的非并表关联方蚂蚁金服为我们平台上的消费者和商家提供支付和金融服务。围绕着我们的平台与业务，一个涵盖了消费者、商家、品牌、零售商、第三方服务提供商、战略合作伙伴及其他企业的数字经济体已经建立起来。
+                    </text>
+                      
+                      
+                </view>
+                  
+                  
+            </view>
+              
+        </scroll-view>
+          
+    </view>
+      
+</view>
+  

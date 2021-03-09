@@ -31,15 +31,14 @@
 <text>\n</text>
 <view class="app">
   <view class="menu">
-    <text bindtap="onclick_menu" data-type="0" style="color: {{type==0?color: ''}}; border-width:{{type==0? 3: 0}}; border-color: {{type==0?color: ''}}; border-bottom-style:solid;">全部</text>
-    <text bindtap="onclick_menu" data-type="1" style="color: {{type==1?color: ''}}; border-width:{{type==1? 3: 0}}; border-color: {{type==0?color: ''}}; border-bottom-style:solid;">未使用</text>
-    <text bindtap="onclick_menu" data-type="2" style="color: {{type==2?color: ''}}; border-width:{{type==2? 3: 0}}; border-color: {{type==0?color: ''}}; border-bottom-style:solid;">已使用</text>
-    <text bindtap="onclick_menu" data-type="3" style="color: {{type==3?color: ''}}; border-width:{{type==3? 3: 0}}; border-color: {{type==0?color: ''}}; border-bottom-style:solid;">已过期</text>
+    <text bindtap="onclick_menu" data-type="0" style="color: {{type==0?color: ''}}; border-width:{{type==0? 3: 0}}; border-color: {{type==0?red: ''}}; border-bottom-style:solid;">全部</text>
+    <text bindtap="onclick_menu" data-type="1" style="color: {{type==1?color: ''}}; border-width:{{type==1? 3: 0}}; border-color: {{type==0?red: ''}}; border-bottom-style:solid;">未使用</text>
+    <text bindtap="onclick_menu" data-type="2" style="color: {{type==2?color: ''}}; border-width:{{type==2? 3: 0}}; border-color: {{type==0?red: ''}}; border-bottom-style:solid;">已使用</text>
+    <text bindtap="onclick_menu" data-type="3" style="color: {{type==3?color: ''}}; border-width:{{type==3? 3: 0}}; border-color: {{type==0?red: ''}}; border-bottom-style:solid;">已过期</text>
   </view>
 
-  <view class='coupons'>
-
-    <view class="item">
+  <view class='coupons' wx:for="{{tickets}}" wx:key="id" wx:for-index="id">
+    <view wx:if="{{item.isHidden===0}}" class="item">
       <view class="lt">
         <text></text>
         <text class="price">1小时</text>
@@ -49,40 +48,8 @@
         <view class="man">限会员使用</view>
         <view class="date">2019-11-11~2020-11-11</view>
       </view>
-      <view class="rt">
-        <text class='{{item.status == 1 ? "" : "over"}}'>未使用</text>
-      </view>
-      <view class="topyuan"></view>
-      <view class="btyuan"></view>
-    </view>
-    <view class="item">
-      <view class="lt">
-        <text></text>
-        <text class="price">1小时</text>
-      </view>
-      <view class="ct">
-        <view class="name">停车券</view>
-        <view class="man">限会员使用</view>
-        <view class="date">2019-11-11~2020-11-11</view>
-      </view>
-      <view class="rt">
-        <text class='{{item.status == 1 ? "" : "over"}}'>未使用</text>
-      </view>
-      <view class="topyuan"></view>
-      <view class="btyuan"></view>
-    </view>
-    <view class="item">
-      <view class="lt">
-        <text></text>
-        <text class="price">1小时</text>
-      </view>
-      <view class="ct">
-        <view class="name">停车券</view>
-        <view class="man">限会员使用</view>
-        <view class="date">2019-11-11~2020-11-11</view>
-      </view>
-      <view class="rt">
-        <text class='{{item.status == 1 ? "" : "over"}}'>未使用</text>
+      <view class="rt" bindtap="ontapuse" id="{{id}}">
+        <text class='{{item.status == 0 ? "" : "over"}}'>{{item.status == 0 ? "未使用" : "已使用"}}</text>
       </view>
       <view class="topyuan"></view>
       <view class="btyuan"></view>
@@ -102,7 +69,7 @@
         </text>
     </view>
     <view class="imgs">
-    <image class="img" src="https://static.worldaic.com.cn/IMAGE/2020-06-16/badf826b60364e3fa5b020011b12513e.jpg"/>
+    <image class="img" bindtap="tapbisiniss" src="https://static.worldaic.com.cn/IMAGE/2020-06-16/badf826b60364e3fa5b020011b12513e.jpg"/>
     <image class="img" src="https://static.worldaic.com.cn/IMAGE/2020-06-16/320a0ea031674e90b3a5507a65e026e9.jpg"/>
     <image class="img" src="https://static.worldaic.com.cn/IMAGE/2020-06-16/0283d11bbc6f487cb06bea5c64a9e105.jpg"/>
     <image class="img" src="https://static.worldaic.com.cn/IMAGE/2020-06-28/4bcda30056524294ab26cbe0296a16c7.jpg"/>

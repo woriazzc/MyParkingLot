@@ -21,9 +21,12 @@ Page({
     showLoading: false
   },
   onLoad: function (options) {
-    var that = this
+    var that = this;
+    this.setData({
+      hasUnpaidOrders: false,
+    })
     wx.setNavigationBarTitle({
-      title: '预约取车'
+      title: '我的车'
     })
 
 
@@ -32,7 +35,30 @@ Page({
     // 页面渲染完成
   },
   onShow: function () {
+    this.setData({
+      plateAreaCharset: ['京', '津', '沪', '渝', '冀', '豫', '云', '辽', '黑', '湘', '皖', '鲁', '新', '苏', '浙', '赣', '鄂', '桂', '甘', '晋', '蒙', '陕', '吉', '闽', '贵', '粤', '青', '藏', '川', '宁', '琼'],
+      plateDigitCharset: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'],
+      inputBoxData: [{ char: '', hover: '' }, { char: '', hover: '' }, { char: '', hover: '' }, { char: '', hover: '' }, { char: '', hover: '' }, { char: '', hover: '' }, { char: '', hover: '' }],
+      currentPos: null,
+      showAreaKeyBoard: false,
+      showKeyBoard: false,
+      hasUnpaidOrders: false,
+      orders: [
+        {
+          PlateNumber: "沪A·TP296",
+          ParkingPosition: "2057 B2层",
+          GenerateDate: "19:21",
+          Total: "5.00"
+        }
+      ],
+      animationData: {},
+      showLoading: false
+    })
     // 页面显示
+    var that = this;
+    this.setData({
+      hasUnpaidOrders: false
+    })
     var animation = wx.createAnimation({
       duration: 500,
       timingFunction: 'ease',
@@ -116,6 +142,9 @@ Page({
       showLoading: false
     })
     wx.stopPullDownRefresh()
+    wx.navigateTo({
+      url: "/pages/parkNav/parkNav"
+    })
   },
   getPlateNumberString: function () {
     return this.data.inputBoxData[0].char
@@ -140,34 +169,6 @@ Page({
       }
       this.bindDigitTap(passOnData)
     }
-  },
-  bindPaymentBtnTap: function(){
-    var that=this
-    wx.showModal({
-      title: '请注意',
-      content: '支付成功后，您将有30分钟时间将车辆驶出。超时将按照车辆停入时间继续计费，请您合理安排时间。',
-      confirmText:"确认支付",
-      success: function (res) {
-        console.log(res);
-        if (res.confirm) {
-          setTimeout(function () {
-            wx.showToast({
-              title: '支付成功',
-              icon: 'success',
-              duration: 700, 
-              success:function(){ 
-                  setTimeout(function () { 
-                      wx.switchTab({ 
-                          url: '/pages/user/user'
-                       }) 
-                   }, 800) 
-               } 
-           })
-          }, 500)
-        }
-      },
-
-    })
   },
   queryOtherPlate:function(){
     this.setData({

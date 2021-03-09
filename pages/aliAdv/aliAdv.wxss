@@ -1,0 +1,79 @@
+/* pages/aliAdv/aliAdv.wxss */
+.container {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container .wrapper {
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.inner-container {
+    width: 640rpx;
+    margin: 0 auto;
+    padding-bottom: 1px;
+}
+
+.line-title {
+    position: relative;
+}
+
+.line-title::before {
+    content: "";
+    position: absolute;
+    left: -34rpx;
+    top: 70rpx;
+    bottom: 0;
+    width: 8rpx;
+    background-color: #5523a6;
+    border-radius: 2rpx;
+}
+
+.line-title .top-text {
+    display: block;
+    line-height: 1;
+    font-size: 60rpx;
+    font-weight: 600;
+    color: #000;
+    text-shadow: 0 4rpx 18rpx rgba(21,7,88,.2);
+}
+
+.line-title .bottom-text {
+    margin-top: 28rpx;
+}
+
+.line-title .bottom-text .text {
+    display: block;
+}
+
+.container .img1 {
+    display: block;
+    margin: 0rpx 0 0rpx;
+    background: #fff;
+    box-shadow: 0rpx 15rpx 30rpx 0rpx rgba(0,0,0,.1);
+    border-radius: 30rpx;
+}
+
+.introduce {
+    margin-top: 40rpx;
+}
+
+.introduce .text {
+    display: block;
+    margin-bottom: 20rpx;
+}
+
+.text {
+    font-size: 30rpx;
+    font-family: PingFangSC-Medium,PingFang SC;
+    line-height: 1.4;
+}
+
+.text.colorLeave2 {
+    color: #8989aa;
+}

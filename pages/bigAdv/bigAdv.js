@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    miao: 6,
+    miao: 16,
     time:''
   },
 

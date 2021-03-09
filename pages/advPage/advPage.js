@@ -5,7 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tickets: [
+      {
+        id: 0,
+        status: 0,
+        isHidden: 0
+      },
+      {
+        id: 0,
+        status: 0,
+        isHidden: 0
+      },
+      {
+        id: 0,
+        status: 0,
+        isHidden: 0
+      },
+      {
+        id: 0,
+        status: 0,
+        isHidden: 0
+      }
+    ],
+    type: 0
   },
 
   /**
@@ -29,38 +51,46 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  ontapuse: function (e) {
+    console.log(e);
+    let ticks = this.data.tickets;
+    ticks[e.currentTarget.id].status = 1;
+    this.setData({
+      tickets: ticks
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  onclick_menu: function (e) {
+    console.log(e);
+    let tp = e.currentTarget.dataset.type;
+    let ticks = this.data.tickets;
+    if (tp == 0) {
+      for (var i = 0; i < ticks.length; i++){
+        ticks[i].isHidden = 0;
+      }
+    }
+    else if (tp == 1) {
+      for (var i = 0; i < ticks.length; i++){
+        if (ticks[i].status == 1) ticks[i].isHidden = 1;
+        else ticks[i].isHidden = 0;
+      }
+    }
+    else if (tp == 2) {
+      for (i = 0; i < ticks.length; i++){
+        if (ticks[i].status == 0) ticks[i].isHidden = 1;
+        else ticks[i].isHidden = 0;
+      }
+    }
+    
+    this.setData({
+      type: tp,
+      tickets: ticks
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  tapbisiniss: function (e) {
+    wx.navigateTo({
+      url: "/pages/aliAdv/aliAdv"
+    });
+      
+    
   }
 })

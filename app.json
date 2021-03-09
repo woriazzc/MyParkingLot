@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/bigAdv/bigAdv",
+    "pages/searchCar/searchCar",
+    "pages/aliAdv/aliAdv",
     "pages/empLot/empLot", 
     "pages/advPage/advPage",
     "pages/getCar/getCar",
@@ -25,7 +27,7 @@
         "selectedIconPath": "icon/steering_wheel.active.png"
       },
       {
-        "pagePath": "pages/parkNav/parkNav",
+        "pagePath": "pages/searchCar/searchCar",
         "text": "我的车",
         "iconPath": "icon/stopwatch.png",
         "selectedIconPath": "icon/stopwatch.active.png"

@@ -59,7 +59,7 @@ Page({
         success:function(){ 
             setTimeout(function () { 
                 wx.switchTab({ 
-                    url: '../../pages/parkNav/parkNav'
+                    url: '/pages/user/user'
                  }) 
              }, 800) 
          } 
